@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    user-select: none;
+}
+
+body{
+    background-color: rgba(211, 211, 211, 0.342);
+}
+
+.container{
+    max-width: 1400px;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+   
+}
+
+/* left side design */
+.left-side{
+ background-color: #03b4e0;
+ border-radius: 30px 0px 0px 30px ;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: space-between;
+ text-align: center;
+ padding: 10px;
+}
+
+.user-card img{
+    width: 170px;
+    border-radius: 50%;
+  box-shadow: 0 0 5px 1px white;
+    
+   
+}
+.user-card h1{
+    margin-top: 20px;
+    font-size: 2.3em;
+}
+.user-card h3{
+    font-weight: 500;
+    padding: 10px;
+}
+
+.user-card{
+    margin-top: 100px;
+    color: white;
+}
+
+.copyright{
+    color: white;
+    padding: 15px;
+    font-size: 0.7em;
+}
+
+/* right side design */
+
+.right-side{
+    background-color: white;
+    border-radius: 30px;
+    position: relative;
+    left: -3%;
+   padding: 20px;
+}
+.right-side h1{
+    margin: 20px;
+    font-weight: bold;
+    font-size: 1.7em;
+}
+
+.experience-container{
+    max-width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 100px;
+    margin-bottom: 30px;
+
+}
+
+.year-container{
+  width: 300px;
+  text-align: end;
+
+}
+
+.year-container h2{
+    font-size: large;
+}
+
+.year-container p {
+    font-size: 0.9em;
+    color: lightgrey;
+
+}
+
+.experience{
+    max-width: 500px;
+    width: 100%;
+}
+
+.experience h1{
+    font-weight: 700;
+    font-size: large;
+    margin: 0;
+    margin-bottom: 10px;
+  
+}
+
+
+.footer-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  
+   
+}
+.footer-container{
+    font-weight: bolder!important;
+      
+}
+.footer-container span{
+    color: #03b4e0;
+
+}
+progress{
+  width: 90%;
+   border-radius: 10px;
+  height: 10px;
+  background: #03b4e0;
+  box-shadow: 5px 2px 5px rgba(0, 0, 0, 0.25);
+ 
+}
+
+  progress::-webkit-progress-value {
+    background: #03b4e0;
+    border-radius: 10px;
+  }
+  progress::-webkit-progress-bar {
+    background: white;
+    border-radius: 10px;
+  }
+
+
+progress, label{
+  margin: 0 30px;
+}
+label {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bolder;
+   
+}
+
+.progress-proc{
+    color: lightgrey!important;
+    font-size: 0.8em;
+    margin-right: 30px;
+    
+}
+
+@media(max-width: 760px){
+    .container{
+       display: flex;
+       flex-direction: column;
+    }
+ 
+
+}
