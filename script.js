@@ -13,34 +13,49 @@ fetch(EXP_API)
 
 // appendina HTML su experience API
 function appendEXP(data){
-   
+       // atspausdins pagal year
+
+       let filterYear = data.filter(a => typeof a.finishYear ==="number").sort((a,b)=> a.finishYear - b.finishYear)
+       filterexpData(filterYear)
+       console.log(data)
+    
+    
+     //atspausdins pagal current
+    let filterCurrent = data.filter(item => typeof item.finishYear ==="string").sort((a,b) => a.startYear - b.startYear)
+    filterexpData(filterCurrent)
+  }
+
+   function filterexpData(data){
     data.map(x=>{
        
-        let articleExp = document.createElement("article")
+      let articleExp = document.createElement("article")
+  
+      articleExp.classList.add("experience-container")
     
-        articleExp.classList.add("experience-container")
-      
-        articleExp.innerHTML =
-     
-        `
-          <div class="year-container">
-            <h2>${x.startYear}-${x.finishYear}</h2>
-            <p>${x.companyName}</p>
-          </div>
-          <div class="experience">
-            <h1>${x.position}</h1>
-            <p>${x.description}</p>
-          </div>
-        
-        `
-      
-        rightSection.prepend(articleExp)
+      articleExp.innerHTML =
    
-        console.log(data)
-    })
-    // appendinam h1
-    rightSection.prepend(h1Exp)
-    }
+      `
+        <div class="year-container">
+          <h2>${x.startYear}-${x.finishYear}</h2>
+          <p>${x.companyName}</p>
+        </div>
+        <div class="experience">
+          <h1>${x.position}</h1>
+          <p>${x.description}</p>
+        </div>
+      
+      `
+    
+      rightSection.prepend(articleExp)
+ 
+     
+  })
+  // appendinam h1
+  rightSection.prepend(h1Exp)
+  }
+
+
+ 
     //  sukuriam h1 su teksta Experience kuri appendinam virsuj kaip title
     let h1Exp = document.createElement("h1")
     h1Exp.innerText = "Experience"
